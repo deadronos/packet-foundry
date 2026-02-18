@@ -4,15 +4,25 @@
   "description": "Packet Foundry 17 – an idle network refinery game",
   "type": "module",
   "scripts": {
-    "build": "tsc --noEmit",
+    "build": "tsc --noEmit && vite build",
     "test": "vitest run",
     "smoke": "tsx scripts/smoke.ts",
-    "dev": "tsx src/ui/cli.ts"
+    "dev": "vite",
+    "dev:cli": "tsx src/ui/cli.ts",
+    "preview": "vite preview"
   },
   "devDependencies": {
-    "typescript": "^5.4.5",
-    "tsx": "^4.11.0",
-    "vitest": "^1.6.0",
-    "@types/node": "^20.12.12"
+    "@types/node": "^25.2.3",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.4",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1",
+    "vitest": "^4.0.18"
+  },
+  "dependencies": {
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
   }
 }
