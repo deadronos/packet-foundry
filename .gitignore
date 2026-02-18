@@ -1,0 +1,6 @@
+node_modules/
+*.log
+packet-foundry-save.json
+.DS_Store
+copilot-session-*.md
+.copilot_prompt_mvp.txt

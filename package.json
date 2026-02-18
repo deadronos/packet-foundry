@@ -1,0 +1,18 @@
+{
+  "name": "packet-foundry",
+  "version": "1.0.0",
+  "description": "Packet Foundry 17 – an idle network refinery game",
+  "type": "module",
+  "scripts": {
+    "build": "tsc --noEmit",
+    "test": "vitest run",
+    "smoke": "tsx scripts/smoke.ts",
+    "dev": "tsx src/ui/cli.ts"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5",
+    "tsx": "^4.11.0",
+    "vitest": "^1.6.0",
+    "@types/node": "^20.12.12"
+  }
+}
