@@ -18,6 +18,13 @@ npm test          # unit test suite
 npm run build     # TypeScript type-check + web build
 ```
 
+### GitHub Pages Deployment
+
+- Deploys to: `https://deadronos.github.io/packet-foundry/`
+- Trigger: push a tag matching `v*` (example: `v1.0.0`)
+- Workflow: `.github/workflows/deploy-pages.yml`
+- Vite production base is set to `/packet-foundry/` for Pages compatibility
+
 ### Web Save Behavior
 
 - The website version auto-saves to browser `localStorage` under `packet-foundry-web-save`.
