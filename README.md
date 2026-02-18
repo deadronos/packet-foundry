@@ -10,11 +10,19 @@ You operate **Packet Foundry 17** in orbital district Aster Dock. Buy low-qualit
 
 ```bash
 npm install
-npm run dev       # interactive CLI
+npm run dev       # website (Vite + React)
+npm run dev:cli   # interactive CLI
+npm run preview   # preview production web build
 npm run smoke     # automated milestone demonstration
 npm test          # unit test suite
-npm run build     # TypeScript type-check
+npm run build     # TypeScript type-check + web build
 ```
+
+### Web Save Behavior
+
+- The website version auto-saves to browser `localStorage` under `packet-foundry-web-save`.
+- Loading the site applies offline progress based on the last saved tick time.
+- CLI save files (`packet-foundry-save.json`) are still used only by the CLI mode.
 
 ---
 
@@ -125,8 +133,13 @@ src/
     actions.ts      ← Pure state-mutation functions (buy, unlock, switch)
   persistence/
     saveLoad.ts     ← JSON save/load + autosave helper
+  web/
+    App.tsx         ← Browser game UI (React)
+    main.tsx        ← Web entrypoint
+    styles.css      ← UI theme/layout
   ui/
     cli.ts          ← Interactive terminal menu (readline-based)
+  vite-env.d.ts     ← Vite client typings
 scripts/
   smoke.ts          ← Automated gameplay simulation / milestone demo
 tests/
@@ -149,5 +162,6 @@ tests/
 
 - TypeScript strict mode; `bundler` module resolution.
 - Tests via Vitest (`npm test`).
-- CLI via `tsx` (no compilation step needed for development).
+- Website via Vite + React (`npm run dev`).
+- CLI via `tsx` (`npm run dev:cli`).
 - Save file: `./packet-foundry-save.json` in the working directory.

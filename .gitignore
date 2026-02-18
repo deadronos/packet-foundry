@@ -1,4 +1,5 @@
 node_modules/
+dist/
 *.log
 packet-foundry-save.json
 .DS_Store
