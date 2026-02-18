@@ -24,6 +24,14 @@ npm run build     # TypeScript type-check + web build
 - Loading the site applies offline progress based on the last saved tick time.
 - CLI save files (`packet-foundry-save.json`) are still used only by the CLI mode.
 
+### Web UX Controls
+
+- Keyboard shortcuts: `1` (+1 tick), `2` (+10 ticks), `3` (+60 ticks), `Space` (toggle auto tick), `S` (save), `L` (load), `R` (refresh contracts), `P` (prestige).
+- Keyboard help modal: press `H` or `?` to open shortcut/accessibility help, `Esc` to close.
+- Responsive quick-action dock appears on mobile for one-tap ticking/save controls.
+- HUD includes progress bars (prestige/contract/lane heat) and mini telemetry charts for payload/credits per tick.
+- Major gameplay panels are collapsible for long sessions, and a compact HUD can be pinned/unpinned while you scroll.
+
 ---
 
 ## Gameplay Overview
